@@ -1,0 +1,82 @@
+html, body {
+	font-family: Comfortaa, Arial, sans-serif;
+}
+html.js, body.js {
+	background: #000;
+	cursor: crosshair;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100%;	
+}
+canvas {
+	transform: translateZ(0);
+	-moz-transform: translateZ(0); 	
+	-webkit-transform: translateZ(0);
+	z-index: 1;
+}
+#hud {
+	display: none;
+	
+	background: #444;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	border-bottom-left-radius: 10px;
+	color: #fff;
+	padding: 5px 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100px;
+}
+#info {
+	display: none;
+	
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	text-align: center;
+	text-shadow: 4px 4px 4px #768;
+	top: 50%;
+	width: 100%;
+}
+
+.js #hud, .js #info, .js footer {
+	display: block;
+	z-index: 2;
+}
+
+/** footer **/
+
+footer {
+	background: rgba(255, 255, 255, 0.3);
+	border-top: 1px solid #888;
+	border-right: 1px solid #888;
+	border-top-right-radius: 10px;
+	bottom: 0;
+	color: #000;
+	display: none;
+	left: 0;
+	margin-bottom: -60px;
+	padding: 5px 10px;
+	position: fixed;
+	text-align: center;
+	vertical-align: middle;
+	width: 200px;
+}
+.details {
+	border-top: 1px solid #888;
+	height: 48px;
+	padding: 5px 10px 0;
+}
+
+/** links **/
+
+a {
+	color: #222;
+}
+a:hover {
+	color: white;
+}

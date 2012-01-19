@@ -1,0 +1,31 @@
+FileETag none
+
+<IfModule mod_mime.c>
+	AddType text/json .json
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+
+	ExpiresByType image/gif "access plus 1 year"
+	ExpiresByType image/jpeg "access plus 1 year"
+	ExpiresByType image/png "access plus 1 year"
+
+	ExpiresByType text/css "access plus 1 year"
+	ExpiresByType text/json "access plus 1 week"
+
+	ExpiresByType text/javascript "access plus 1 year"
+	ExpiresByType application/javascript "access plus 1 year"
+	ExpiresByType application/x-javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+	AddOutPutFilterByType DEFLATE text/json text/html text/css text/javascript application/javascript application/x-javascript
+</IfModule>
+
+<IfModule mod_rewrite.c>
+#	RewriteEngine On
+#
+#	RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteRule style-v\d+\.css style.css [L]
+</IfModule>

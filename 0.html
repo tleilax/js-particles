@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+	<title>Particle Test #0</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta itemprop="name" content="Particle Test #0">
+	<meta itemprop="description" content="A not-so-simple test of the canvas element">
+	<meta itemprop="image" content="http://labs.mindfuck.de/js/particles/0.jpg">
+	
+	<meta property="og:title" content="Particle Test #0" />
+	<meta property="og:site_name" content="mindfuck labs" />
+	<meta property="og:image" content="http://labs.mindfuck.de/js/particles/0.jpg" />
+
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Comfortaa" />
+	<link type="text/css" rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+
+	<noscript>
+		No javascript? Too bad...
+	</noscript>
+	
+	<div id="info">Click anywhere to start</div>
+	<div id="hud" style="display: none;">&nbsp;</div>
+	
+	<footer>
+		<div style="padding-bottom: 5px;">
+			&copy; 2011 by <a href="http://twitter.com/tleilax">@tleilax</a>
+		</div>
+		
+		<div class="details">
+			<div class="g-plusone" data-size="small"></div>
+			<div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false"></div>
+		</div>
+	</footer>
+	
+	<div id="fb-root"></div>
+
+	<script src="tlx.labs.js?v=1"></script>
+	<script>
+	(function() {
+		Labs.addScript([
+			'tlx.key-observer.js',
+			'tlx.click-observer.js',
+			'tlx.canvas.js',
+			'tlx.timer.js',
+			'tlx.particles.js',
+		], function () {
+			Labs.addScript('0.js', Labs.init);
+		});
+	}());
+	</script>
+
+	<script defer>
+	(function() {
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-25655074-1']);
+		_gaq.push(['_trackPageview']);
+
+		Labs.addScript([
+			'http://www.google-analytics.com/ga.js',
+			'https://apis.google.com/js/plusone.js',
+			'//connect.facebook.net/en_US/all.js#appId=122824454485996&xfbml=1'
+		],{async: true});
+	})();
+	</script>	
+</body>
+</html>
